@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+/*@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';*/
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+md-card {
+  max-width: 90%;
+  margin: 1em auto;
+  /*text-align: center;*/
+}
+
+md-toolbar-row {
+  justify-content: space-between;
+}
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+
+.example-container {
+  width: 100%;
+  height: 800px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.metrics-card {
+  width: 300px;
+}
+
+.notification-card {
+  width: 100%;
+}
+
+.example-form {
+  width: 500px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.sendbutton {
+  width: 25%
+}
+
+.login-card {
+  width: 500px;
+}
+
+.login-form {
+  width: 500px;
+}
+
+.login-full-width {
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+<md-card class="login-card">
+    <md-card-header>
+        <md-card-title>Please login to access service</md-card-title>
+        <md-card-subtitle><span style="color:red;">{{errorMsg}}</span></md-card-subtitle>
+    </md-card-header>
+    <md-card-content>
+        <!--<form class="login-form">-->
+        <p>
+            <md-input-container class="login-full-width">
+                <input [(ngModel)]="user.userEmail" id="userEmail" mdInput placeholder="Email Address" value="">
+            </md-input-container>
+        </p>
+        <p>
+            <md-input-container class="login-full-width">
+                <input [(ngModel)]="user.password" id="password" type="password" placeholder="Password" mdInput>
+            </md-input-container>
+        </p>
+        <!--</form>-->
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="login()" type="submit" name="action">Login</button>
+        <button md-button>Cancel</button>
+    </md-card-actions>
+</md-card>

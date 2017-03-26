@@ -1,0 +1,32 @@
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav mode="side" class="example-sidenav">
+    <md-list>
+      <h3 md-subheader>Menu</h3>
+      <md-list-item><button md-button routerLink="/private" routerLinkActive="active">Dashboard</button></md-list-item>
+      <md-list-item><button md-button routerLink="/notifications" routerLinkActive="active">Notifications</button></md-list-item>
+      <md-list-item><button md-button routerLink="/vehicles" routerLinkActive="active">Vehicles</button></md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+        <i class="material-icons app-toolbar-menu">menu</i>
+      </button>
+
+    <span>Vehicollate</span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+  </md-toolbar>
+
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item (click)="logout()">Logout</button>
+    <button md-menu-item>Help</button>
+  </md-menu>
+
+  <div>
+
+  </div>
+
+</md-sidenav-container>

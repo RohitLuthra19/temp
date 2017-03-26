@@ -1,0 +1,87 @@
+
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav mode="side" class="example-sidenav">
+    <md-list>
+      <h3 md-subheader>Menu</h3>
+      <md-list-item><button md-button routerLink="/private" routerLinkActive="active">Dashboard</button></md-list-item>
+      <md-list-item><button md-button routerLink="/notifications" routerLinkActive="active">Notifications</button></md-list-item>
+      <md-list-item><button md-button routerLink="/vehicles" routerLinkActive="active">Vehicles</button></md-list-item>
+    </md-list>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+        <i class="material-icons app-toolbar-menu">menu</i>
+      </button>
+
+    <span>Vehicollate</span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+        <md-icon>more_vert</md-icon>
+      </button>
+  </md-toolbar>
+
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item (click)="logout()">Logout</button>
+    <button md-menu-item>Help</button>
+  </md-menu>
+
+  <div>
+    <md-grid-list cols="3" rowHeight="150px">
+      <md-grid-tile>
+        <md-card class="metrics-card">
+          <md-card-header>
+            <md-card-title>{{users}}</md-card-title>
+            <md-card-subtitle>Users</md-card-subtitle>
+          </md-card-header>
+          <!-- <md-card-content>
+            Total number of users
+          </md-card-content> -->
+        </md-card>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-card class="metrics-card">
+          <md-card-header>
+            <md-card-title>{{vehicles}}</md-card-title>
+            <md-card-subtitle>Vehicles</md-card-subtitle>
+          </md-card-header>
+          <!-- <md-card-content>
+            Total number of users
+          </md-card-content> -->
+        </md-card>
+      </md-grid-tile>
+      <md-grid-tile>
+        <md-card class="metrics-card">
+          <md-card-header>
+            <md-card-title>{{messages}}</md-card-title>
+            <md-card-subtitle>Claims</md-card-subtitle>
+          </md-card-header>
+          <!-- <md-card-content>
+            Total number of users
+          </md-card-content> -->
+        </md-card>
+      </md-grid-tile>
+    </md-grid-list>
+
+    <md-card class="notification-card">
+      <form class="example-form">
+        <p>
+          <md-select placeholder="Notification Type">
+            <md-option *ngFor="let nType of notificationTypes" [value]="nType.value">
+              {{ nType.viewValue }}
+            </md-option>
+          </md-select>
+        </p>
+        <p>
+          <md-input-container class="example-full-width">
+            <textarea mdInput placeholder="Notification Detail"></textarea>
+          </md-input-container>
+        </p>
+        <p>
+          <button md-raised-button color="primary" class="sendbutton">Send</button>
+        </p>
+      </form>
+    </md-card>
+  </div>
+
+</md-sidenav-container>
